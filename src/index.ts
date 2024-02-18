@@ -1,19 +1,22 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import {defaultMiddleware} from '@nlbridge/express';
 
 const port = process.env.PORT || 3000;
-const app = express();
+const origin = (process.env.ORIGIN || 'nlux.dev').split(',');
 
-app.use(cors());
-app.use(bodyParser.json());
+const app = express();
+app.use(cors({origin}));
+app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the nlbridge demo API. The demo endpoint is at POST /api');
+  res.send('The nlbridge demo endpoint is at POST /api');
 });
 
-// This is all you need to add an nlbridge API endpoint to your Express app.
+//
+// 🎯 This is all what you need to add nlbridge API endpoint to your Express app
+// with default config: OpenAI adapters, and in-memory context management.
+//
 app.post(
     '/api',
     defaultMiddleware('openai', {
