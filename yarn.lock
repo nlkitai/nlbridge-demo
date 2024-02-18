@@ -27,6 +27,20 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@nlbridge/core@0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@nlbridge/core/-/core-0.2.6.tgz#6b1a6481103403bac2a4b24cd303983a87ee4360"
+  integrity sha512-StwSsiGQzPlcIicQ4/twOCV9A6ZndT1wWln+PijTz6w1oRmp1UNTxc2zWUrWcf8vQHHw4Y6j1UdCAy8I1sX8YA==
+  dependencies:
+    openai "^4.26.0"
+
+"@nlbridge/express@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@nlbridge/express/-/express-0.2.6.tgz#3f498c7fabb15ef0202a26a48c30dc6589e12563"
+  integrity sha512-HeNQUwfxlb17Y6DBlqJjLOEKbH/KLQY/XRm11vDfDgKu7KUaPMnRm+G6rJjteL62rS7IX7Uw/dbq0MM2B12rkQ==
+  dependencies:
+    "@nlbridge/core" "0.2.6"
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -621,7 +635,7 @@ on-finished@2.4.1:
   dependencies:
     ee-first "1.1.1"
 
-openai@^4.28.0:
+openai@^4.26.0, openai@^4.28.0:
   version "4.28.0"
   resolved "https://registry.yarnpkg.com/openai/-/openai-4.28.0.tgz#ded00e3d98c25758b5406c9675ec27a957e00930"
   integrity sha512-JM8fhcpmpGN0vrUwGquYIzdcEQHtFuom6sRCbbCM6CfzZXNuRk33G7KfeRAIfnaCxSpzrP5iHtwJzIm6biUZ2Q==
