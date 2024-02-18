@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the nlbridge Demo APIs!');
+  res.send('Welcome to the nlbridge demo API.');
 });
 
 app.listen(port, () => {
